@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE diagram [
+		
+		<!ELEMENT diagram (diagram_value,qualitygoal*,emotionalgoal*,agent*,goal+)>
+		<!ELEMENT diagram_value (#PCDATA)>
+		
+		<!ELEMENT qualitygoal (qualitygoal_value)>
+		<!ELEMENT qualitygoal_value (#PCDATA)>
+		<!ATTLIST qualitygoal qualitygoal_id ID #REQUIRED>
+		
+		<!ELEMENT emotionalgoal (emotionalgoal_value)>
+		<!ELEMENT emotionalgoal_value (#PCDATA)>
+		<!ATTLIST emotionalgoal emotionalgoal_id ID #REQUIRED>
+				
+		<!ELEMENT agent (agent_type)>
+		<!ELEMENT agent_type (software_agent|human_agent)>
+        <!ELEMENT software_agent (#PCDATA)>
+        <!ELEMENT human_agent (#PCDATA)>
+		<!ATTLIST agent agent_id ID #REQUIRED>
+		
+		<!ELEMENT goal (refinement_level,goal_value)>
+		<!ELEMENT refinement_level (#PCDATA)>
+		<!ELEMENT goal_value (#PCDATA)>
+		<!ATTLIST goal goal_id ID #REQUIRED>
+		<!ATTLIST goal decomposed_from IDREFS #IMPLIED>
+		<!ATTLIST goal associated_to IDREFS #IMPLIED>	
+]>
