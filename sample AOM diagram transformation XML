@@ -1,0 +1,174 @@
+<diagram>
+    <diagram_value>IdCredit value proposition, first- and second level goal model</diagram_value>
+
+<!--list of quality goals in the diagram-->	
+	<qualitygoal qualitygoal_id="q1">
+		<qualitygoal_value>trustworthy</qualitygoal_value>
+	</qualitygoal>
+	<qualitygoal qualitygoal_id="q2">
+		<qualitygoal_value>scalable</qualitygoal_value>
+	</qualitygoal>	
+	<qualitygoal qualitygoal_id="q3">
+		<qualitygoal_value>secure</qualitygoal_value>
+	</qualitygoal>
+	<qualitygoal qualitygoal_id="q4">
+		<qualitygoal_value>transparent</qualitygoal_value>
+	</qualitygoal>
+	<qualitygoal qualitygoal_id="q5">
+		<qualitygoal_value>performant</qualitygoal_value>
+	</qualitygoal>	
+	<qualitygoal qualitygoal_id="q6">
+		<qualitygoal_value>usable</qualitygoal_value>
+	</qualitygoal>
+	<qualitygoal qualitygoal_id="q7">
+		<qualitygoal_value>portable</qualitygoal_value>
+	</qualitygoal>
+	
+<!--list of agents in the diagram-->		
+	<agent agent_id="a1">
+		<agent_type >
+			<software_agent>transaction rule</software_agent>
+		</agent_type>
+	</agent>
+	<agent agent_id="a2">
+		<agent_type >
+			<human_agent>donor</human_agent>
+		</agent_type>
+	</agent>
+	<agent agent_id="a3">
+		<agent_type >
+			<human_agent>identifier</human_agent>
+		</agent_type>
+	</agent>
+	<agent agent_id="a4">
+		<agent_type >
+			<human_agent>acceptor</human_agent>
+		</agent_type>
+	</agent>	
+	<agent agent_id="a5">
+		<agent_type >
+			<software_agent>consensus</software_agent>
+		</agent_type>
+	</agent>
+	
+<!--root goal or value proposition and associations -->		
+    <goal goal_id="g0">
+        <refinement_level>0</refinement_level>
+        <goal_value>A Decentralized Blockchain System for the Attestation and Authorization of Digital Assets</goal_value>
+    </goal>
+
+<!--No1 first level refinements and sub goals-->	     
+		<goal goal_id="g1" decomposed_from="g0" associated_to="q1 q2 q3">
+			<refinement_level>1</refinement_level>
+			<goal_value>manage transaction</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g1.1" decomposed_from= "g1 g0" associated_to="a1 q4">
+				<refinement_level>2</refinement_level>
+				<goal_value>create transaction rule</goal_value>
+			</goal>
+
+ 			<goal goal_id="g1.2" decomposed_from= "g1 g0" associated_to="q4 q5 a2 a3">
+				<refinement_level>2</refinement_level>
+				<goal_value>publish transaction</goal_value>
+			</goal>
+			
+ 			<goal goal_id="g1.3" decomposed_from= "g1 g0" associated_to="a2 a3 a4">
+				<refinement_level>2</refinement_level>
+				<goal_value>view transaction</goal_value>
+			</goal>	
+
+<!--No2 first level refinements and sub goals-->
+		<goal goal_id="g2" decomposed_from="g0" associated_to="a4">
+			<refinement_level>1</refinement_level>
+			<goal_value>store asset information</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g2.1" decomposed_from= "g2 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>request identity verification</goal_value>
+			</goal>
+
+ 			<goal goal_id="g2.2" decomposed_from= "g2 g0" associated_to="q2 a3">
+				<refinement_level>2</refinement_level>
+				<goal_value>read attestation</goal_value>
+			</goal>
+			
+ 			<goal goal_id="g2.3" decomposed_from= "g2 g0" associated_to="q1 q3 q4 q5">
+				<refinement_level>2</refinement_level>
+				<goal_value>validate attestation</goal_value>
+			</goal>	
+
+<!--No3 first level refinements and sub goals-->
+		<goal goal_id="g3" decomposed_from="g0" associated_to="q2 q3 q5 q6 q7 a2 a3 a4">
+			<refinement_level>1</refinement_level>
+			<goal_value>manage key</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g3.1" decomposed_from= "g3 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>create key</goal_value>
+			</goal>
+
+<!--No4 first level refinements and sub goals-->
+		<goal goal_id="g4" decomposed_from="g0" associated_to="q2 q3 a3">
+			<refinement_level>1</refinement_level>
+			<goal_value>attest asset</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g4.1" decomposed_from= "g4 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>verify identity</goal_value>
+			</goal>
+
+ 			<goal goal_id="g4.2" decomposed_from= "g4 g0" associated_to="q1 q4">
+				<refinement_level>2</refinement_level>
+				<goal_value>validate attestation transaction</goal_value>
+			</goal>	 	
+
+<!--No5 first level refinements and sub goals-->
+		<goal goal_id="g5" decomposed_from="g0">
+			<refinement_level>1</refinement_level>
+			<goal_value>create a communication channel</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g5.1" decomposed_from= "g5 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>choose a communication channel</goal_value>
+			</goal>	
+
+<!--No6 first level refinements and sub goals-->
+		<goal goal_id="g6" decomposed_from="g0" associated_to="q1 q2 q3 q4 q5 a3 a4">
+			<refinement_level>1</refinement_level>
+			<goal_value>manage blocks</goal_value>
+		</goal>   
+						
+ 			<goal goal_id="g6.1" decomposed_from= "g6 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>produce blocks</goal_value>
+			</goal>
+
+ 			<goal goal_id="g6.2" decomposed_from= "g6 g0" associated_to="a5">
+				<refinement_level>2</refinement_level>
+				<goal_value>elect block producers</goal_value>
+			</goal>	
+
+<!--No7 first level refinements and sub goals-->
+		<goal goal_id="g7" decomposed_from="g0" associated_to="q2 q3 q6 a2 a3 a4">
+			<refinement_level>1</refinement_level>
+			<goal_value>onboard user</goal_value>
+		</goal>   				
+		
+ 			<goal goal_id="g7.1" decomposed_from= "g7 g0">
+				<refinement_level>2</refinement_level>
+				<goal_value>onboard active participant</goal_value>
+			</goal>
+
+ 			<goal goal_id="g7.2" decomposed_from= "g7 g0" associated_to="q1 q4">
+				<refinement_level>2</refinement_level>
+				<goal_value>manage wallet</goal_value>
+			</goal>				
+</diagram>
+
+<!--corrected declared qualitygoals and agents once and then associate to the goals -->
+<!--corrected merged refinements under goal -->
